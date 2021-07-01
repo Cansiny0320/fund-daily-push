@@ -7,10 +7,9 @@ const fundIds = JSON.parse(
 );
 
 const SCKEY = process.env.SCKEY;
-console.log(SCKEY);
 
 async function pushMessage(text: string, desp: string) {
-  const {data} = await axios.post(
+  axios.post(
     `https://sc.ftqq.com/${SCKEY}.send`,
     stringify({
       text,
