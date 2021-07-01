@@ -7,6 +7,7 @@ const fundIds = JSON.parse(
 );
 
 const SCKEY = process.env.SCKEY;
+console.log(SCKEY);
 
 async function pushMessage(text: string, desp: string) {
   const {data} = await axios.post(
@@ -21,7 +22,6 @@ async function pushMessage(text: string, desp: string) {
       },
     }
   );
-  console.log(data);
 }
 
 async function getMyFundDetail(fundId: string) {
@@ -42,7 +42,6 @@ async function main() {
   result.forEach((e: any) => {
     desp += `${e.fundName} ${e.fundValue}%\n`;
   });
-  console.log(desp);
   pushMessage('今日涨跌', desp);
 }
 
