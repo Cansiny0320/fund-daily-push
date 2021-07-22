@@ -24,7 +24,7 @@ jobs:
           node-version: '12.x'
 
       - name: Run install
-        run: yarn
+        run: npm i
 
       - name: Run Script
-        run: yarn start
+        run: npm run start
