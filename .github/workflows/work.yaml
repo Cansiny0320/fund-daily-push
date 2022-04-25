@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-  # 定时打卡
   schedule:
     - cron: 0 6 * * 1-5
 
